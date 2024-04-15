@@ -6,18 +6,45 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct BookListView: View {
+    @Environment(\.modelContext) private var context
+    @Query(sort: \Book.title) private var books: [Book]
     @State private var createNewBook = false
     var body: some View {
         NavigationStack {
-            VStack {
-                Image(systemName: "globe")
-                    .imageScale(.large)
-                    .foregroundStyle(.tint)
-                Text("Hello, world!")
+            Group {
+                if books.isEmpty {
+                    ContentUnavailableView("Enter you first book.", systemImage: "book.fill")
+                } else {
+                    List {
+                        ForEach(books) { book in
+                            NavigationLink {
+                                Text(book.title)
+                            } label: {
+                                HStack(spacing: 10) {
+                                    book.icon
+                                    VStack(alignment: .leading) {
+                                        Text(book.title).font(.title2)
+                                        Text(book.author).foregroundStyle(.secondary)
+                                        
+                                    }
+                                }
+                            }
+                            
+                        }
+                        .onDelete { indexSet in
+                            indexSet.forEach { index in
+                                let book = books[index]
+                                context.delete(book)
+                            }
+                            
+                        }
+                    }
+                    .listStyle(.plain)
+                }
             }
-            .padding()
             .navigationTitle("Books List")
             .toolbar {
                 Button {
@@ -37,4 +64,5 @@ struct BookListView: View {
 
 #Preview {
     BookListView()
+        .modelContainer(for: Book.self, inMemory: true)
 }
