@@ -8,17 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		1B67A0602BCD60A60081A0B3 /* BookTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B67A05F2BCD60A60081A0B3 /* BookTrackerApp.swift */; };
-		1B67A0622BCD60A60081A0B3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B67A0612BCD60A60081A0B3 /* ContentView.swift */; };
+		1B67A0622BCD60A60081A0B3 /* BookListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B67A0612BCD60A60081A0B3 /* BookListView.swift */; };
 		1B67A0642BCD60A90081A0B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B67A0632BCD60A90081A0B3 /* Assets.xcassets */; };
 		1B67A0672BCD60A90081A0B3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B67A0662BCD60A90081A0B3 /* Preview Assets.xcassets */; };
+		1B67A06F2BCD65210081A0B3 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B67A06E2BCD65210081A0B3 /* Book.swift */; };
+		1B67A0742BCD70DD0081A0B3 /* NewBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B67A0732BCD70DD0081A0B3 /* NewBookView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1B67A05C2BCD60A60081A0B3 /* BookTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B67A05F2BCD60A60081A0B3 /* BookTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTrackerApp.swift; sourceTree = "<group>"; };
-		1B67A0612BCD60A60081A0B3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1B67A0612BCD60A60081A0B3 /* BookListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListView.swift; sourceTree = "<group>"; };
 		1B67A0632BCD60A90081A0B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B67A0662BCD60A90081A0B3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1B67A06E2BCD65210081A0B3 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		1B67A0732BCD70DD0081A0B3 /* NewBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBookView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +55,10 @@
 		1B67A05E2BCD60A60081A0B3 /* BookTracker */ = {
 			isa = PBXGroup;
 			children = (
+				1B67A0702BCD70520081A0B3 /* View */,
+				1B67A06D2BCD65120081A0B3 /* Model */,
 				1B67A05F2BCD60A60081A0B3 /* BookTrackerApp.swift */,
-				1B67A0612BCD60A60081A0B3 /* ContentView.swift */,
+				1B67A0612BCD60A60081A0B3 /* BookListView.swift */,
 				1B67A0632BCD60A90081A0B3 /* Assets.xcassets */,
 				1B67A0652BCD60A90081A0B3 /* Preview Content */,
 			);
@@ -65,6 +71,22 @@
 				1B67A0662BCD60A90081A0B3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1B67A06D2BCD65120081A0B3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1B67A06E2BCD65210081A0B3 /* Book.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1B67A0702BCD70520081A0B3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1B67A0732BCD70DD0081A0B3 /* NewBookView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +159,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B67A0622BCD60A60081A0B3 /* ContentView.swift in Sources */,
+				1B67A0742BCD70DD0081A0B3 /* NewBookView.swift in Sources */,
+				1B67A0622BCD60A60081A0B3 /* BookListView.swift in Sources */,
 				1B67A0602BCD60A60081A0B3 /* BookTrackerApp.swift in Sources */,
+				1B67A06F2BCD65210081A0B3 /* Book.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
